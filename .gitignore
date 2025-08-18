@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+*.log
+
+# dotenv environment files (ignore all except example)
+.env*
+!.env.example
+
+# Test reports
+mochawesome-report/
+test-output/
+coverage/
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+
