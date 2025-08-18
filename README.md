@@ -197,16 +197,6 @@ Use the correct `PLATFORM` and `ENV` to load desired capability and config files
 
 ---
 
-
-## 📌 To-Do / Upcoming
-
-- [ ] Add GitHub Actions or Jenkins CI
-- [ ] Add reusable utilities (e.g., common gestures)
-- [ ] Expand test coverage to new screens
-- [ ] Optional: Add parameterized locators in Page Objects
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Raise issues or PRs to improve functionality and structure.
