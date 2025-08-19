@@ -38,8 +38,8 @@ describe("Login Functionality", function () {
 
   it("L101_ User should login with valid credentials", async () => {
     console.log('Testing valid login credentials...');
-    await loginPage.enterUsername(env.username);
-    await loginPage.enterPassword(env.password);
+    await loginPage.enterUsername(env.mobileNumber);
+    await loginPage.enterPassword(env.otp);
     await loginPage.tapLogin();
 
     const isSuccess = await loginPage.validateLoginSuccess("Welcome");

@@ -14,7 +14,7 @@ try {
 }
 
 // Validate required environment variables
-const requiredEnvVars = ['USERNAME', 'PASSWORD', 'APP_PACKAGE'];
+const requiredEnvVars = ['MOBILE_NUMBER', 'OTP', 'APP_PACKAGE'];
 const missingVars = requiredEnvVars.filter(varName => !process.env[varName]);
 
 if (missingVars.length > 0) {
@@ -29,8 +29,8 @@ module.exports = {
   initDriver,
   LoginPage,
   env: {
-    username: process.env.USERNAME,
-    password: process.env.PASSWORD,
+    mobileNumber: process.env.MOBILE_NUMBER,
+    otp: process.env.OTP,
     appPackage: process.env.APP_PACKAGE
   }
 };
