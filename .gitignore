@@ -6,7 +6,7 @@ npm-debug.log*
 *.log
 
 # dotenv environment files (ignore all except example)
-.env*
+.env
 !.env.example
 
 # Test reports

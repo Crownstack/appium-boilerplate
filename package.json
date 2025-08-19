@@ -1,19 +1,33 @@
 {
-  "name": "appium_boilerplate",
+  "name": "appium-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "main": "appium.config.js",
+  "description": "A clean and comprehensive Appium automation framework using JavaScript with Page Object Model, supporting both Android and iOS platforms",
+  "main": "fixture.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-  "test:dev": "TEST_ENV=dev mocha tests/*.js",
-  "test:qa": "TEST_ENV=qa mocha tests/*.js",
-  "test:stg": "TEST_ENV=stg mocha tests/*.js"
-},
-  "keywords": [],
+    "test": "mocha tests/*.js --reporter mochawesome",
+    "test:dev": "TEST_ENV=dev mocha tests/*.js --reporter mochawesome",
+    "test:qa": "TEST_ENV=qa mocha tests/*.js --reporter mochawesome",
+    "test:stg": "TEST_ENV=stg mocha tests/*.js --reporter mochawesome",
+    "test:android": "PLATFORM=android npm run test",
+    "test:ios": "PLATFORM=ios npm run test",
+    "start:appium": "appium",
+    "clean:reports": "rm -rf mochawesome-report"
+  },
+  "keywords": [
+    "appium",
+    "automation",
+    "testing",
+    "mobile",
+    "javascript",
+    "page-object-model",
+    "android",
+    "ios"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
     "appium": "^2.19.0",
@@ -22,5 +36,8 @@
     "mocha": "^11.7.1",
     "mochawesome": "^7.1.3",
     "wd": "^1.14.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

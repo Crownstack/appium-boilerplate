@@ -1,10 +1,12 @@
-const { wd, appiumConfig } = require('../fixture.js');
+const wd = require('wd');
+const appiumConfig = require('./appium.config');
 
-const driver = wd.promiseChainRemote("http://localhost:4723/wd/hub");
+const APPIUM_SERVER_URL = process.env.APPIUM_SERVER_URL || 'http://localhost:4723/wd/hub';
 
 async function initDriver() {
+  const driver = wd.promiseChainRemote(APPIUM_SERVER_URL);
   await driver.init(appiumConfig);
   return driver;
 }
 
-module.exports = { initDriver };
+module.exports = { initDriver, wd };
